@@ -43,6 +43,11 @@ public class PeliculasServicios {
 	
 	}
 	
+	
+	public Pelicula crear(Pelicula pelicula) {
+		return repositorio.save(pelicula);
+	}
+	
 	public Pelicula buscarPorId(Integer id) {
 		return repositorio.findById(id).get();
 	}
