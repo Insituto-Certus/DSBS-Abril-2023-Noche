@@ -45,7 +45,7 @@ public class PeliculaWebController {
 		
 	}
 	
-	 @RequestMapping(value ="/actualizar/{id}", method = RequestMethod.PUT)
+	 @RequestMapping(value ="/actualizar/{id}")
 	public ModelAndView editarPelicula(@PathVariable(name="id") int id) {
 		ModelAndView mav = new ModelAndView("/moduloPeliculas/editarPelicula");
 		Pelicula pelicula = servicio.buscarPorId(id);
@@ -53,7 +53,7 @@ public class PeliculaWebController {
 		return mav;
 	}
 	
-	@RequestMapping(value = "/eliminar/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/eliminar/{id}")
 	public String elimnarPelicula(@PathVariable(name="id") int id) {
 		servicio.borrarPorId(id);
 		return "redirect:/peliculas/listarTodo";
