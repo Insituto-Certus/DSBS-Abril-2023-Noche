@@ -1,0 +1,25 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /Cine
+    
+  error:
+    include-details: always
+    
+# MySQL
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/carteleradb2?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+# Registry Client
+eureka:
+   client:
+      fetch-registry: true
+      serviceUrl:
+         defaultZone: http://localhost:8889/eureka
+
+    
