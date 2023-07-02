@@ -1,12 +1,18 @@
 server:
-  port: 8082
+  port: 8085
   servlet:
-    context-path: /Cine
+    context-path: /carteleraWeb
     
   error:
     include-details: always
-    
-# MySQL
+
+# Configuraciones de la web          
+  mvc:
+    view:
+      prefix: resources/templates
+      suffix: html
+               
+# Conexión a MySQL
 
 spring:
   datasource:
@@ -14,7 +20,16 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-    
+
+##Configuraciones JPA - Hibernate
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
 # Registry Client
 eureka:
    client:

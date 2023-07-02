@@ -1,10 +1,5 @@
 server:
   port: 8889
-#  servlet:
-#   context-path: /Cine
-    
-#  error:
-#    include-details: always
 eureka:
    instance:
       hostname: localhost
