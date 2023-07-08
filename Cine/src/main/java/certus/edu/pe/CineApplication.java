@@ -2,14 +2,14 @@ package certus.edu.pe;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-//import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-//@EnableDiscoveryClient
+@EnableDiscoveryClient // habilitar el client
 @SpringBootApplication
-public class MicroEmployeeApplication {
+public class CineApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MicroEmployeeApplication.class, args);
+		SpringApplication.run(CineApplication.class, args);
 	}
 
 }
